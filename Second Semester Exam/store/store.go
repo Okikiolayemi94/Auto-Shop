@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-"github.com/Okikiolayemi/Auto-Shop/product
+"github.com/Okikiolayemi94/Auto-Shop/product
 	"github.com/google/uuid"
 )
 
