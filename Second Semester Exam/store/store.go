@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
+"github.com/Okikiolayemi/Auto-Shop/product
 	"github.com/google/uuid"
 )
 
@@ -13,7 +13,7 @@ type (
 	// Store models the store for available products and sold products
 	Store map[string]*product.Product
 
-	// SoldItemsDisplay models the structure products will be displayed from
+	// SoldItemsDisplay models the structure products that will be displayed from
 	// the sold items store
 	SoldItemsDisplay struct {
 		TotalPrice float64     `json:"total_price"`
