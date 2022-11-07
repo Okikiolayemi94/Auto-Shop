@@ -91,9 +91,9 @@ func (c *Car) GetStruct() interface{} {
 func (c *Car) DisplayProductStatus() (string, bool) {
 	msg := ""
 	if c.Quantity > 0 {
-		msg = fmt.Sprintf("Product In stock")
+		msg = fmt.Sprintf("This Product In stock")
 		return msg, true
 	}
-	msg = fmt.Sprintf("Product out of stock")
+	msg = fmt.Sprintf("This Product out of stock")
 	return msg, false
 }
