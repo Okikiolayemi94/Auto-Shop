@@ -5,18 +5,16 @@ import (
 )
 
 func main() {
-	car1 := NewCar("Mercedes", "GLK", "red", 4, 50000, 2020)
-	car2 := NewCar("Toyota", "Camry", "blue", 7, 3000, 3018)
-	car3 := NewCar("Lexus", "VLC", "blue", 0, 3000, 3018)
-
+	car1 := NewCar("Honda", "Civic", "Grey", 4, 50000, 2020)
+	car2 := NewCar("Toyota", "Corolla", "ash", 3, 60000, 2008)
+	
 	// instantiate a new store
 	store := NewStore()
 
 	//  adding item
 	store.AddItem(car1)
 	store.AddItem(car2)
-	store.AddItem(car3)
-
+	
 	// listing all products in the store
 	store.ListAllProduct()
 	fmt.Println()
