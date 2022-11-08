@@ -19,7 +19,7 @@ type Store struct {
 	OutStock map[string]Product
 }
 
-// NewStore ... Create a new store during use
+// NewStore ... Creates a new store during use
 func NewStore() *Store {
 	return &Store{
 		ID:       GenerateID(),
@@ -91,12 +91,12 @@ func (s *Store) SellItem(c *Car, quantity float64) {
 			} else if inStockQuantity == 1 {
 				s.OutStock[id] = item
 				m[id] = item
-				fmt.Printf("Congrats you just sold %v %s for %v each\n", quantity, item.Product.GetName(), item.Product.GetPrice())
+				fmt.Printf("You just sold %v %s for %v each\n", quantity, item.Product.GetName(), item.Product.GetPrice())
 				delete(s.InStock, id)
 			} else {
 				item.Product.SetQuantityIn(quantity)
 				s.InStock[id] = item
-				fmt.Printf("Congrats you just sold %v %s for %v each\n", quantity, item.Product.GetName(), item.Product.GetPrice())
+				fmt.Printf("You just sold %v %s for %v each\n", quantity, item.Product.GetName(), item.Product.GetPrice())
 
 				if outItem, ok := s.OutStock[id]; ok {
 					outItem.Product.SetQuantityOut(quantity)
@@ -105,7 +105,7 @@ func (s *Store) SellItem(c *Car, quantity float64) {
 			}
 
 		} else {
-			fmt.Println("Not enough quantity up for sale")
+			fmt.Println("Not enough quantity available for sale")
 		}
 	}
 }
