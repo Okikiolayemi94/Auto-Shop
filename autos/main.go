@@ -6,25 +6,24 @@ import (
 )
 
 func main() {
-	car1 := shops.NewCar("Mercedes", "GLK", "red", 4, 50000, 2020)
-	car2 := shops.NewCar("Toyota", "Camry", "blue", 7, 3000, 3018)
-	car3 := shops.NewCar("Lexus", "VLC", "blue", 0, 3000, 3018)
+	car1 := shops.NewCar("Honda", "Civic", "Grey", 4, 50000, 2020)
+	car2 := shops.NewCar("Toyota", "Corolla", "ash", 3, 60000, 2008)
 
 	// instantiate a new store
 	store := shops.NewStore()
 
-	//  adding item
+	//  adding item to the store
 	store.AddItem(car1)
 	store.AddItem(car2)
-	store.AddItem(car3)
+	
 
-	// listing all products in the store
+	// listing all products available in the store
 	store.ListAllProduct()
 	fmt.Println()
 
-	// sell item
+	// sell an item
 	store.SellItem(car1, 1)
-	store.SellItem(car2, 5)
+	store.SellItem(car2, 2)
 
 	// list all sold item
 	store.ListSoldItem()
