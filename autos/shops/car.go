@@ -5,23 +5,17 @@ import (
 )
 
 type Car struct {
-	ID                string  `json:"id"`
-	Brand             string  `json:"brand"`
-	Model             string  `json:"model"`
-	Quantity          float64 `json:"quantity"`
-	Price             float64 `json:"price"`
-	Color             string  `json:"color"`
-	YearOfManufacture int64   `json:"yearOfManufacture"`
+	ID                string  
+	Brand             string  
+	Model             string 
+	Quantity          float64 
+	Price             float64
+	Color             string  
+	YearOfManufacture int64  
 }
 
 type CarOut struct {
-	ID                string  `json:"id"`
-	Brand             string  `json:"brand"`
-	Model             string  `json:"model"`
-	Quantity          float64 `json:"quantity"`
-	Price             float64 `json:"price"`
-	Color             string  `json:"color"`
-	YearOfManufacture int64   `json:"yearOfManufacture"`
+	Car
 }
 
 // NewCar ... creates a new car type during use
@@ -92,9 +86,9 @@ func (c *Car) GetStruct() interface{} {
 func (c *Car) DisplayProductStatus() (string, bool) {
 	msg := ""
 	if c.Quantity > 0 {
-		msg = fmt.Sprintf("Product In stock")
+		msg = fmt.Sprintf("Product is In stock")
 		return msg, true
 	}
-	msg = fmt.Sprintf("Product out of stock")
+	msg = fmt.Sprintf("Product currently out of stock")
 	return msg, false
 }
